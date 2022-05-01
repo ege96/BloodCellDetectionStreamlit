@@ -11,6 +11,8 @@ scipy>=1.5
 torch>=1.7.0
 torchvision>=0.8.1
 tqdm>=4.41.0
+streamlit
+libgl1
 
 # Logging -------------------------------------
 tensorboard>=2.4.1
