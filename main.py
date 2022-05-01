@@ -32,11 +32,11 @@ def draw(image:str, labelVals:list, thresh:float):
 @st.cache
 def loadModel():
     import requests
-    weights = "https://github.com/pogman96/BloodCellDetectionStreamlit/raw/main/data/weights/best.pt"
+    weights = "https://github.com/pogman96/BloodCellDetection/releases/download/weights/best.pt"
     r = requests.get(weights)
-    with open("best.pt", "wb") as f:
+    with open("data/weights/best.pt", "wb") as f:
         f.write(r.content)
-    model = torch.hub.load("yolov5", "custom", path="best.pt", source="local", force_reload=True)
+    model = torch.hub.load("yolov5", "custom", path="data/weights/best.pt", source="local", force_reload=True)
     print("loaded model")
     return model
 
