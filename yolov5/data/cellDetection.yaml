@@ -1,0 +1,4 @@
+train: data\training/images
+val: data\testing/images
+nc: 2
+names: ["rbc", "wbc"]
