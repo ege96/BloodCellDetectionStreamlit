@@ -31,7 +31,7 @@ def draw(image:str, labelVals:list, thresh:float):
 
 @st.cache
 def loadModel():
-    model = torch.hub.load("yolov5", "custom", path="data/weights/best.pt", source="local")
+    model = torch.hub.load("yolov5", "custom", path="data/weights/best.pt", source="local", force_reload=True)
     print("loaded model")
     return model
 
