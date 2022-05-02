@@ -69,8 +69,8 @@ threshold = st.sidebar.slider(
 
 originalImage = Image.open(file)
 fileDimensions = originalImage.size
-W = fileDimensions[0]
-H = fileDimensions[1]
+W = fileDimensions[1]
+H = fileDimensions[0]
 originalImage = np.array(originalImage)
 
 
